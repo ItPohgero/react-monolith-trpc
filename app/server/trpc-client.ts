@@ -1,8 +1,8 @@
 import { createTRPCClient, httpBatchLink } from "@trpc/client";
-import type { AppRouter } from "./server/router";
+import type { AppRouter } from "./router";
 
 const port = import.meta.env.VITE_API_PORT || 5173;
-const client = createTRPCClient<AppRouter>({
+const trpc = createTRPCClient<AppRouter>({
 	links: [
 		httpBatchLink({
 			url: `http://localhost:${port}/trpc`,
@@ -10,4 +10,4 @@ const client = createTRPCClient<AppRouter>({
 	],
 });
 
-export default client;
+export default trpc;
