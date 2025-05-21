@@ -1,5 +1,4 @@
 export async function CTX() {
-    return {}
+	return {};
 }
-export type Context = Awaited<ReturnType<typeof CTX>>
-
+export type Context = Awaited<ReturnType<typeof CTX>>;

@@ -1,35 +1,39 @@
 {
-  "name": "react-monolith-trpc",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "react-router build",
-    "dev": "bunx --bun vite",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "bun ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
-  },
-  "dependencies": {
-    "@hono/trpc-server": "^0.3.4",
-    "@react-router/node": "^7.5.3",
-    "@react-router/serve": "^7.5.3",
-    "@trpc/client": "^11.1.2",
-    "isbot": "^5.1.28",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router": "^7.5.3",
-    "react-router-hono-server": "^2.13.0",
-    "zod": "^3.25.7"
-  },
-  "devDependencies": {
-    "@react-router/dev": "^7.5.3",
-    "@tailwindcss/vite": "^4.1.4",
-    "@types/node": "^20",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "tailwindcss": "^4.1.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.3",
-    "vite-tsconfig-paths": "^5.1.4"
-  }
+	"name": "react-monolith-trpc",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "react-router build",
+		"dev": "bunx --bun vite",
+		"start": "bun ./build/server/index.js",
+		"typecheck": "react-router typegen && tsc",
+		"biome:format": "bunx biome format --write .",
+		"biome:lint": "bunx biome lint --write",
+		"biome:check": "bunx biome check --write",
+		"biome": "bun run biome:format && bun run biome:lint && bun run biome:check"
+	},
+	"dependencies": {
+		"@hono/trpc-server": "^0.3.4",
+		"@react-router/node": "^7.5.3",
+		"@react-router/serve": "^7.5.3",
+		"@trpc/client": "^11.1.2",
+		"isbot": "^5.1.28",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-router": "^7.5.3",
+		"react-router-hono-server": "^2.13.0",
+		"zod": "^3.25.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@react-router/dev": "^7.5.3",
+		"@tailwindcss/vite": "^4.1.4",
+		"@types/node": "^20",
+		"@types/react": "^19.1.2",
+		"@types/react-dom": "^19.1.2",
+		"tailwindcss": "^4.1.4",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.3",
+		"vite-tsconfig-paths": "^5.1.4"
+	}
 }

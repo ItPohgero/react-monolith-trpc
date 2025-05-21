@@ -1,4 +1,3 @@
+import { z } from "zod";
 
-import { z } from 'zod'
-
-export const SchemaInput = z.string().nullish()
+export const SchemaInput = z.string().nullish();
